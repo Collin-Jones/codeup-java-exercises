@@ -20,5 +20,18 @@ public class ControlFlowExercises {
 //        for (int aNumber2 = 2; aNumber2 < 1000000L; aNumber2++) {
 //            System.out.println(aNumber2);
 //        }
+
+//        for (int aNumber3 = 1; aNumber3 <= 100; aNumber3++) {
+//            if (aNumber3 % 3 == 0 && aNumber3 % 5 == 0) {
+//                System.out.println("FizzBuzz");
+//            } else if (aNumber3 % 5 == 0) {
+//                System.out.println("Buzz");
+//            } else if (aNumber3 % 3 == 0){
+//                System.out.println("Fizz");
+//            }else{
+//                System.out.println(aNumber3);
+//            }
+//
+//        }
     }
 }
