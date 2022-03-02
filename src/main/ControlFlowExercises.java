@@ -1,5 +1,7 @@
 package main;
 
+import java.util.Scanner;
+
 public class ControlFlowExercises {
     public static void main(String[] args) {
 //        int aNumber= 5;
@@ -33,5 +35,18 @@ public class ControlFlowExercises {
 //            }
 //
 //        }
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Enter an Integer: " );
+        String userInput = input.nextLine();
+        int userNum = Integer.parseInt(userInput);
+
+        System.out.println(userNum);
+        System.out.println("number | squared | cubed\n");
+        System.out.println("------ | ------- | -----\n");
+        for (int i = 1; i <= userNum ; i++) {
+            System.out.printf("%d   | %d   | %d \n" , i, i*i, (i*i*i));
+        }
     }
 }
