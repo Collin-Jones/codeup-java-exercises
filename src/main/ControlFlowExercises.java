@@ -1,5 +1,6 @@
 package main;
 
+import java.util.Objects;
 import java.util.Scanner;
 
 public class ControlFlowExercises {
@@ -36,17 +37,43 @@ public class ControlFlowExercises {
 //
 //        }
 
+//        Scanner input = new Scanner(System.in);
+//
+//        System.out.println("Enter an Integer: " );
+//        String userInput = input.nextLine();
+//        int userNum = Integer.parseInt(userInput);
+//
+//        System.out.println(userNum);
+//        System.out.println("number | squared | cubed\n");
+//        System.out.println("------ | ------- | -----\n");
+//        for (int i = 1; i <= userNum ; i++) {
+//            System.out.printf("%-4d   | %-5d   | %-4d \n" , i, i*i, (i*i*i));
+//        }
         Scanner input = new Scanner(System.in);
 
-        System.out.println("Enter an Integer: " );
-        String userInput = input.nextLine();
-        int userNum = Integer.parseInt(userInput);
+        String yesOrNo;
+        boolean confirmation;
+        do {
+            System.out.println("Enter a grade: ");
+            String userInput = input.nextLine();
+            int grade = Integer.parseInt(userInput);
+//            System.out.println(grade);
+            if (grade < 60) {
+                System.out.println("F");
+            } else if (grade < 67) {
+                System.out.println("D");
+            } else if (grade < 80){
+                System.out.println("C");
+            }else if (grade < 88){
+                System.out.println("B");
+            }else {
+                System.out.println("A");
+            }
 
-        System.out.println(userNum);
-        System.out.println("number | squared | cubed\n");
-        System.out.println("------ | ------- | -----\n");
-        for (int i = 1; i <= userNum ; i++) {
-            System.out.printf("%d   | %d   | %d \n" , i, i*i, (i*i*i));
-        }
+                System.out.println("Continue? y/n");
+            yesOrNo = input.nextLine();
+            confirmation = yesOrNo.equals("y");
+        } while (confirmation);
+
     }
 }
