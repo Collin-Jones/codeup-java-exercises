@@ -33,6 +33,7 @@ public class GradesApplication {
         radagon.addGrades(99);
 
         printOutput(student);
+        printStudentData(student);
     }
 
     public static void printOutput(HashMap<String, Student> student){
@@ -48,9 +49,14 @@ public class GradesApplication {
     public static void printStudentData(HashMap<String, Student> student){
         Scanner scanner = new Scanner(System.in);
         String userInput = scanner.nextLine();
-        Student foundStudent;
+        Student findStudent;
         for(String key : student.keySet()){
-
+            if(!student.containsKey(key)){
+                System.out.println("Sorry, no student found with the GitHub username of %s" + key);
+            }else if (userInput.equalsIgnoreCase(key)){
+                findStudent = student.get(key);
+                System.out.println("Name: %s - Github username - %s \n" + "Current Grade average - %.2f\n" + findStudent.getName() + key + findStudent.getGradeAverage());
+            }
         }
     }
 }
