@@ -1,7 +1,7 @@
 package grades;
 
 import java.util.HashMap;
-
+import java.util.Scanner;
 
 public class GradesApplication {
 
@@ -31,6 +31,26 @@ public class GradesApplication {
         radagon.addGrades(89);
         radagon.addGrades(93);
         radagon.addGrades(99);
+
+        printOutput(student);
     }
 
+    public static void printOutput(HashMap<String, Student> student){
+        System.out.println("Welcome");
+        System.out.println("\nHere is the list of the student's Github username: \n");
+        System.out.println("| ");
+        for (String username : student.keySet()){
+            System.out.println("%s | " + username);
+        }
+        System.out.println("\n What student would you like to see more information on?");
+    }
+
+    public static void printStudentData(HashMap<String, Student> student){
+        Scanner scanner = new Scanner(System.in);
+        String userInput = scanner.nextLine();
+        Student foundStudent;
+        for(String key : student.keySet()){
+
+        }
+    }
 }
