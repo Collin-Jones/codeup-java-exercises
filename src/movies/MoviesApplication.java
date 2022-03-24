@@ -9,6 +9,7 @@ public class MoviesApplication {
         while(runningOptions){
             System.out.println(displayMenu());
             int response = userChoices();
+            int answer = 0;
             runningOptions = theChoices(answer);
         }
     }
@@ -33,7 +34,7 @@ public class MoviesApplication {
     private static void moviesCatergory(String category){
         for (Movie movie : MoviesArray.findAll()) {
             if(movie.getCategory().equalsIgnoreCase(category)){
-                System.out.println("%s -- %s\n", movie.getName(), movie.getCategory());
+                System.out.printf("%s -- %s\n", movie.getName(), movie.getCategory());
             }
         }
     }
@@ -49,7 +50,9 @@ public class MoviesApplication {
             case 1:
                 System.out.println("\n");
                 for(Movie movie : MoviesArray.findAll());
-                System.out.println("%s -- %s\n", movie.getName(), movie.getCategory());
+                Movie movie = null;
+                assert false;
+                System.out.printf("%s -- %s\n", movie.getName(), movie.getCategory());
 
             case 2:
                 System.out.println("\n");
